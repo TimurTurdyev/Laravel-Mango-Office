@@ -6,7 +6,7 @@ composer require timur-turdyev/laravel-mango-office
 ```
 ## Подключение
 В config/app.php в секции Package Service Providers <br />
-`TimurTurdyev\MangoOffice\ServiceProvider::class,` <br />
+`TimurTurdyev\MangoOffice\MangoServiceProvider::class,` <br />
 
 ## Конфигурация
 Выполняем команду <br />
@@ -14,7 +14,7 @@ composer require timur-turdyev/laravel-mango-office
 
 Затем выбрыть провайдера 
 ```
-TimurTurdyev\MangoOffice\MangoOfficeServiceProvider
+TimurTurdyev\MangoOffice\MangoServiceProvider
 ```
 Будет создан конфигурационный файл config/mangooffice.php, где:
 * api_key - Уникальный код АТС
