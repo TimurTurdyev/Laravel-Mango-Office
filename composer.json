@@ -1,0 +1,23 @@
+{    
+    "name": "timur-turdyev/laravel-mango-office",
+    "description": "Mango-office API class",
+    "keywords": ["Mango-office", "Mango", "Mango-office API", "Mango class"],
+    "minimum-stability": "stable",
+    "type": "library",
+    "version":"1.0",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://github.com/TimurTurdyev/mango-office.git"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "guzzlehttp/guzzle": "^7"
+    },
+    "autoload": {
+        "psr-4": {
+           "TimurTurdyev\\MangoOffice\\": "src/"
+        }
+    }
+}
