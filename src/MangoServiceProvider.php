@@ -1,8 +1,9 @@
 <?php
 namespace TimurTurdyev\MangoOffice;
 
+use \Illuminate\Support\ServiceProvider;
 
-class ServiceProvider extends \Illuminate\Support\ServiceProvider
+class MangoServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
