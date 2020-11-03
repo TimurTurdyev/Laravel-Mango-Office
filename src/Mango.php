@@ -1,7 +1,7 @@
 <?php
 namespace TimurTurdyev\MangoOffice;
 
-use TimurTurdyev\Mangooffice\MangoApi;
+use TimurTurdyev\MangoOffice\MangoApi;
 use Illuminate\Support\Facades\Config;
 /**
  * Список методов для работы с API mango-office
@@ -123,6 +123,14 @@ class Mango extends MangoApi
             ->setFormParams($this->authParam($request))
             ->execute();
         $response = $data->client->getBody()->getContents();
+        /*
+         * sleep(5);
+         * Потому что
+         * - В ответе на запрос приходит ключ, с помощью которого можно будет получить статистику по завершению ее построения.
+         * - Пример ответа: {"key":"b3Z7pivetID7uPJCFWMmSaFTtTO3meavk7h6caDaw3dSX++wPR/ZIntjIfssKf/B+DvIt8hPJ ReV8v4MYspQQA=="}
+         *  Смотреть - https://www.mango-office.ru/support/integratsiya-api/spisok_integratsiy/emulyator_api_virtualnoy_ats/#/API%20%D0%A1%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0/post_stats_request
+         */
+        sleep(5);
         $data = $init->setBaseUri('https://app.mango-office.ru')
             ->setPath('/vpbx/stats/result')
             ->setMethod('POST')

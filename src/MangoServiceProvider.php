@@ -1,7 +1,7 @@
 <?php
 namespace TimurTurdyev\MangoOffice;
 
-use \Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 class MangoServiceProvider extends ServiceProvider
 {
